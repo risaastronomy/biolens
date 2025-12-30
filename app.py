@@ -27,7 +27,7 @@ if api_key:
         if st.button('Identify'):
             with st.spinner('Analyzing...'):
                 try:
-                    model = genai.GenerativeModel('gemini-1.5-flash')
+                    model = genai.GenerativeModel('gemini-1.5-flash-001')
                     prompt = "Identify this living organism. Give its common name, scientific name, and 3 fun facts. If dangerous, warn me."
                     response = model.generate_content([prompt, image])
                     st.markdown(response.text)
